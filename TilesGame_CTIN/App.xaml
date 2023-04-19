@@ -1,0 +1,9 @@
+﻿<Application x:Class="TilesGame_CTIN.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:TilesGame_CTIN"
+             StartupUri="Window1.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

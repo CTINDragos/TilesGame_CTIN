@@ -1,0 +1,35 @@
+﻿<Window x:Class="TilesGame_CTIN.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TilesGame_CTIN"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <Grid Margin="0,10,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <ListView x:Name="playerListView" ItemsSource="{Binding playerList}" Margin="37,28,10,28" SelectionChanged="playerListView_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" />
+                    <GridViewColumn Header="Level" DisplayMemberBinding="{Binding Level}" />
+                    <GridViewColumn Header="TimesLost" DisplayMemberBinding="{Binding TimesHeLost}" />
+                    <GridViewColumn Header="Clicks" DisplayMemberBinding="{Binding Clicked}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <StackPanel Grid.Column="1" Margin="10,10,10,28">
+            <Image x:Name="playerImage" Width="200" Height="200" />
+            <Button Content="Start Game" Click="StartGameButton_Click" Margin="0,40,0,0" />
+            <Button Content="Create New Character" Click="CreateCharButton_Click"  Height="20" Margin="0,50,0,12"/>
+        </StackPanel>
+    </Grid>
+</Window>
+
+
+
